@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inicio"
+        android:icon="@drawable/home_circle"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/viajar"
+        android:icon="@drawable/car_estate"
+        android:title="Viajar" />
+
+    <item
+        android:id="@+id/serGuia"
+        android:icon="@drawable/nature_people"
+        android:title="Seja um guia" />
+
+</menu>
