@@ -1,4 +1,4 @@
-package connectuor;
+package connectuor.Paginas_de_menu;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -24,7 +24,6 @@ public class PaginaDosGuias extends AppCompatActivity {
     private RecyclerView rvGuias;
     private ListaDeGuiasRVAdapter adapter;
     private String estadoSelecionado;
-    private Estados estados;
     ArrayAdapter<String> arrayAdapter;
 
 
@@ -66,7 +65,7 @@ public class PaginaDosGuias extends AppCompatActivity {
                         EditText edGuiaNome = (EditText) viewDialog.findViewById(R.id.ed_guia_nome);
                         EditText edGuiaTelefone = (EditText) viewDialog.findViewById(R.id.ed_guia_fone);
                         EditText edGuiaValor = (EditText) viewDialog.findViewById(R.id.ed_guia_preco);
-                        AutoCompleteTextView acGuiaEstado = (AutoCompleteTextView) viewDialog.findViewById(R.id.ed_guia_estado);
+                        AutoCompleteTextView acGuiaEstado = (AutoCompleteTextView) viewDialog.findViewById(R.id.ac_guia_estado);
 
                         String[] todos_estados = Estados.povoar();
 

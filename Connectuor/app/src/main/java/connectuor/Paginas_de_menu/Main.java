@@ -1,4 +1,4 @@
-package connectuor;
+package connectuor.Paginas_de_menu;
 
 import android.content.Intent;
 import android.os.Bundle;

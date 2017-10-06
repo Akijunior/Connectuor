@@ -44,15 +44,13 @@ public class ListaDeViagensRVAdapter extends RecyclerView.Adapter<ListaDeViagens
         final Viagem viagem = this.viagens.get(position);
 
         holder.tv_viagem_destino.setText(viagem.getLocal());
-        holder.tv_viagem_qtd_pessoas.setText("" + viagem.getQuantidade_de_pessoas());
-        holder.tv_viagem_qtd_dias.setText("" + viagem.getQuantidade_dias());
         holder.tv_viagem_dt_inicio.setText(viagem.getData_inicio());
 
         holder.itemView.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Livro: " + viagem.getLocal(), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(view, "Destino: " + viagem.getLocal(), Snackbar.LENGTH_LONG).show();
             }
         });
 
@@ -67,7 +65,15 @@ public class ListaDeViagensRVAdapter extends RecyclerView.Adapter<ListaDeViagens
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
 
-                        if(item.getItemId() == R.id.item_remover_viagem){
+                        if(item.getItemId() == R.id.item_ver_detalhes_da_viagem){
+                            Toast.makeText(context, "Mostrar detalhes", Toast.LENGTH_SHORT).show();
+                        }
+                        else if(item.getItemId() == R.id.item_falar_com_guia){
+                            viagem.delete();
+                            ListaDeViagensRVAdapter.this.notifyItemRemoved(position);
+                            Toast.makeText(context, "Fazer chamada pelo telefone", Toast.LENGTH_LONG).show();
+                        }
+                        else if(item.getItemId() == R.id.item_remover_viagem){
                             viagem.delete();
                             ListaDeViagensRVAdapter.this.notifyItemRemoved(position);
                             Toast.makeText(context, "Removido", Toast.LENGTH_SHORT).show();
@@ -93,16 +99,12 @@ public class ListaDeViagensRVAdapter extends RecyclerView.Adapter<ListaDeViagens
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
         protected TextView tv_viagem_destino;
-        protected TextView tv_viagem_qtd_pessoas;
-        protected TextView tv_viagem_qtd_dias;
         protected TextView tv_viagem_dt_inicio;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             tv_viagem_destino = (TextView) itemView.findViewById(R.id.tv_nome_destino);
-            tv_viagem_qtd_dias = (TextView) itemView.findViewById(R.id.tv_qtd_dias);
-            tv_viagem_qtd_pessoas = (TextView) itemView.findViewById(R.id.tv_qtd_pessoas);
             tv_viagem_dt_inicio = (TextView) itemView.findViewById(R.id.tv_data_inicio);
         }
     }

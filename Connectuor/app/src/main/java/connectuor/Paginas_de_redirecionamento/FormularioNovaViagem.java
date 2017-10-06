@@ -1,4 +1,4 @@
-package connectuor;
+package connectuor.Paginas_de_redirecionamento;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,7 +24,6 @@ public class FormularioNovaViagem extends AppCompatActivity {
     private EditText ed_quantidade_de_pessoas;
     private EditText ed_data_inicio;
     private AutoCompleteTextView acEstadoDeDestino;
-    private String estadoSelecionado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +39,7 @@ public class FormularioNovaViagem extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
-                estadoSelecionado = (String) adapterView.getItemAtPosition(position);
+                String estadoSelecionado = (String) adapterView.getItemAtPosition(position);
             }
         });
 

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item android:id="@+id/item_ver_detalhes_da_viagem"
+        android:title="Ver detalhes desta viagem" />
+    <item android:id="@+id/item_falar_com_guia"
+        android:title="Contactar guia sobre viagem" />
     <item android:id="@+id/item_remover_viagem"
         android:title="Remover esta viagem" />
 

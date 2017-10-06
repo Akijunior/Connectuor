@@ -3,14 +3,13 @@
     package="com.example.ljuni.connectuor">
 
     <application
+        android:name="com.orm.SugarApp"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name="com.orm.SugarApp">
-
+        android:theme="@style/AppTheme">
         <meta-data
             android:name="VERSION"
             android:value="2" />
@@ -19,7 +18,7 @@
             android:value="true" />
 
         <activity
-            android:name="connectuor.Main"
+            android:name="connectuor.Paginas_de_menu.Main"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,11 +27,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="connectuor.PaginaDeViagens"
+            android:name="connectuor.Paginas_de_menu.PaginaDeViagens"
             android:label="@string/title_activity_pagina_de_viagens"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="connectuor.FormularioNovaViagem" />
-        <activity android:name="connectuor.PaginaDosGuias"></activity>
+        <activity android:name="connectuor.Paginas_de_redirecionamento.FormularioNovaViagem" />
+        <activity android:name="connectuor.Paginas_de_menu.PaginaDosGuias" />
+        <activity android:name="connectuor.Paginas_de_redirecionamento.GuiasDisponiveis"></activity>
     </application>
 
 </manifest>

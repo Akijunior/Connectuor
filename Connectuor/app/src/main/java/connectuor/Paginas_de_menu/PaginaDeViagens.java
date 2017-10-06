@@ -1,4 +1,4 @@
-package connectuor;
+package connectuor.Paginas_de_menu;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import connectuor.Adapters.ListaDeViagensRVAdapter;
+import connectuor.Paginas_de_redirecionamento.FormularioNovaViagem;
 import connectuor.Modelos.Viagem;
 
 import com.example.ljuni.connectuor.R;
@@ -64,10 +65,10 @@ public class PaginaDeViagens extends AppCompatActivity
     }
 
     public void NovaViagem(View view) {
-        Snackbar.make(view, "Fazer nova viagem... ", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
         Intent intent = new Intent(this, FormularioNovaViagem.class);
         startActivity(intent);
+        Snackbar.make(view, "Fazer nova viagem... ", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
         }
 
     @Override
