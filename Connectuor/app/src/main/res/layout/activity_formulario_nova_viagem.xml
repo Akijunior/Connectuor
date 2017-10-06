@@ -28,7 +28,6 @@
             android:id="@+id/ed_dt_inicio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="time"
             android:hint="Data de inicio prevista "/>
 
     </android.support.design.widget.TextInputLayout>

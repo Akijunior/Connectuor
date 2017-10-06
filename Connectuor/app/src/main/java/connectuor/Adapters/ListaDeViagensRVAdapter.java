@@ -69,8 +69,6 @@ public class ListaDeViagensRVAdapter extends RecyclerView.Adapter<ListaDeViagens
                             Toast.makeText(context, "Mostrar detalhes", Toast.LENGTH_SHORT).show();
                         }
                         else if(item.getItemId() == R.id.item_falar_com_guia){
-                            viagem.delete();
-                            ListaDeViagensRVAdapter.this.notifyItemRemoved(position);
                             Toast.makeText(context, "Fazer chamada pelo telefone", Toast.LENGTH_LONG).show();
                         }
                         else if(item.getItemId() == R.id.item_remover_viagem){

@@ -36,14 +36,12 @@ public class ListaDeGuiasRVAdapter extends RecyclerView.Adapter<ListaDeGuiasRVAd
 
         protected TextView tv_guia_nome;
         protected TextView tv_guia_estado;
-        protected TextView tv_guia_preco;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             tv_guia_nome = (TextView) itemView.findViewById(R.id.tv_guia_nome);
             tv_guia_estado = (TextView) itemView.findViewById(R.id.tv_guia_estado);
-            tv_guia_preco = (TextView) itemView.findViewById(R.id.tv_guia_preco);
         }
     }
 
